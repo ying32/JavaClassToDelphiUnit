@@ -1,29 +1,29 @@
 //==============================================================================
-// ¹¦ÄÜ£º½âÎöJavaClassÎÄ¼şÉú³ÉDelphi¿ª·¢Androidµ¥Ôª
+// åŠŸèƒ½ï¼šè§£æJavaClassæ–‡ä»¶ç”ŸæˆDelphiå¼€å‘Androidå•å…ƒ
 //
-// ÈÕÆÚ£º2014-8-2
-// ×÷Õß£ºying32
+// æ—¥æœŸï¼š2014-8-2
+// ä½œè€…ï¼šying32
 // QQ  : 396506155
 // E-mail: yuanfen3287@vip.qq.com
 // MSN : ying_32@live.cn
 //
-// ×¢£ºÒ»¸ö¼òµ¥µÄ½âÎöjava classÎÄ¼şÀà, Ã»ÏëÒª×öµÃÌ«¸´ÔÓºÍ
-//     Áé»îĞÔ, ÒòÎª×ªÎªPascalµÄµ¥Ôª²»ĞèÒªÆäËüÒ»Ğ©ĞÅÏ¢,
-//     ¹»ÓÃ¾ÍĞĞ, ÄÜ¶Á¾ÍĞĞ°¡, ÓĞĞËÈ¤µÄ¿ÉÒÔ×ÔĞĞÍêÉÆÏÂ
+// æ³¨ï¼šä¸€ä¸ªç®€å•çš„è§£æjava classæ–‡ä»¶ç±», æ²¡æƒ³è¦åšå¾—å¤ªå¤æ‚å’Œ
+//     çµæ´»æ€§, å› ä¸ºè½¬ä¸ºPascalçš„å•å…ƒä¸éœ€è¦å…¶å®ƒä¸€äº›ä¿¡æ¯,
+//     å¤Ÿç”¨å°±è¡Œ, èƒ½è¯»å°±è¡Œå•Š, æœ‰å…´è¶£çš„å¯ä»¥è‡ªè¡Œå®Œå–„ä¸‹
 //    
-//     Ä¿Ç°»¹ÓĞ²»ÉÙĞèÒªÍêÉÆ, Õâ¸ö¶«Î÷È¥Äê¾ÍÏë¹ıÒªĞ´, µ«¶Ô
-//     javaclassÎÄ¼şÈ«È»ÎŞÖª, ¾ÍÒ»Ö±Ã»¶¯ÊÖ.
-//     ÊÖ¶¯×ª»»µ¥ÔªÌ«ÀÛÁË, ²»¹ıºÃ¾Ã¶¼Ã»ÓĞÅö¹ıAndroidµÄ¿ª·¢ÁË
+//     ç›®å‰è¿˜æœ‰ä¸å°‘éœ€è¦å®Œå–„, è¿™ä¸ªä¸œè¥¿å»å¹´å°±æƒ³è¿‡è¦å†™, ä½†å¯¹
+//     javaclassæ–‡ä»¶å…¨ç„¶æ— çŸ¥, å°±ä¸€ç›´æ²¡åŠ¨æ‰‹.
+//     æ‰‹åŠ¨è½¬æ¢å•å…ƒå¤ªç´¯äº†, ä¸è¿‡å¥½ä¹…éƒ½æ²¡æœ‰ç¢°è¿‡Androidçš„å¼€å‘äº†
 //
-//     Ç°Á½ÌìÔÚÍøÉÏ¿´µ½ÁËÒ»¸öÍâ¹úÈËĞ´µÄÒ»¸öÕâÑùµÄ×ª»»¹¤¾ß
-//     ²»¹ıÊÇÊÕ·ÑµÄ, ×î±ãÒËÒ²Òª€90, ÓÚÊÇ¾ÍÖØĞÂ¿ªÊ¼ÑĞ¾¿
+//     å‰ä¸¤å¤©åœ¨ç½‘ä¸Šçœ‹åˆ°äº†ä¸€ä¸ªå¤–å›½äººå†™çš„ä¸€ä¸ªè¿™æ ·çš„è½¬æ¢å·¥å…·
+//     ä¸è¿‡æ˜¯æ”¶è´¹çš„, æœ€ä¾¿å®œä¹Ÿè¦ï¿½90, äºæ˜¯å°±é‡æ–°å¼€å§‹ç ”ç©¶
 //
-// JavaClassÎÄ¼ş¸ñÊ½:
+// JavaClassæ–‡ä»¶æ ¼å¼:
 //     http://www.mobilefish.com/tutorials/java/java_quickguide_classfile.html
 //
-// ĞŞ¸ÄÈÕÖ¾:
+// ä¿®æ”¹æ—¥å¿—:
 //
-//   2014-8-4 ¸üĞÂºÍĞŞÕı²ÎÊıÀàĞÍºÍ·µ»ØÖµÀàĞÍ
+//   2014-8-4 æ›´æ–°å’Œä¿®æ­£å‚æ•°ç±»å‹å’Œè¿”å›å€¼ç±»å‹
 //==============================================================================
 unit JavaClassFile;
 
@@ -44,7 +44,7 @@ type
      function ReadByte: Byte;
      function ReadWord: Word;
      function ReadCardinal: Cardinal;
-     function ReadUInt64: Cardinal;
+     function ReadUInt64: UInt64;
      function ReadShortInt: ShortInt;
      function ReadSmallInt: SmallInt;
      function ReadInteger: Integer;
@@ -354,7 +354,7 @@ end;
 
 procedure TJavaClassFile.analyzerAttributePool(AData: TReadConvert; AIndex: Integer);
 begin
-  // Ã»Ğ´£®£®£®£®£®£®ÓĞµãÓÃ²»×ÅµÄÑù×Ó
+  // æ²¡å†™ï¼ï¼ï¼ï¼ï¼ï¼æœ‰ç‚¹ç”¨ä¸ç€çš„æ ·å­
 end;
 
 procedure TJavaClassFile.analyzerConstantPool(AData: TReadConvert; AIndex: Integer);
@@ -512,7 +512,7 @@ begin
       LMethod^.Attributes[I].Attribute_Name_Index := AData.ReadWord;
       LMethod^.Attributes[I].Attribute_Length := AData.ReadCardinal;
       //println('aaaaa=%d', [I]);
-      // Ìø¹ı³ı´úÂë¶ÎµÄ
+      // è·³è¿‡é™¤ä»£ç æ®µçš„
       if I >= 1 then
       begin
         AData.Seek(LMethod^.Attributes[I].Attribute_Length);
@@ -534,7 +534,7 @@ begin
           //println('bbbbb=%d', [J]);
           LMethod^.Attributes[I].Attr[J].Attribute_Name_Index := AData.ReadWord;
           LMethod^.Attributes[I].Attr[J].Attribute_Length := AData.ReadCardinal;
-//          println('AIndex=%d,  ÊôĞÔ³¤¶È=%d,, I=%d, J=%d', [AIndex, LMethod^.Attributes[I].Attr[J].Attribute_Length, I, J]);
+//          println('AIndex=%d,  å±æ€§é•¿åº¦=%d,, I=%d, J=%d', [AIndex, LMethod^.Attributes[I].Attr[J].Attribute_Length, I, J]);
           if J = 0 then
           begin
             AData.Seek(LMethod^.Attributes[I].Attr[J].Attribute_Length);
@@ -587,7 +587,7 @@ begin
     begin
       FClassFile.Minor := LReadConvert.ReadWord;
       FClassFile.Major := LReadConvert.ReadWord;
-      // ·ÖÎö³£Á¿³Ø
+      // åˆ†æå¸¸é‡æ± 
       FClassFile.ConstantPoolCount := LReadConvert.ReadWord;
       if FClassFile.ConstantPoolCount > 0 then
       begin
@@ -598,7 +598,7 @@ begin
       FClassFile.AccessFlags := LReadConvert.ReadWord;
       FClassFile.ThisClass := LReadConvert.ReadWord;
       FClassFile.SuperClass := LReadConvert.ReadWord;
-      // ·ÖÎö½Ó¿Ú
+      // åˆ†ææ¥å£
       FClassFile.InterfacesCount := LReadConvert.ReadWord;
       if FClassFile.InterfacesCount > 0 then
       begin
@@ -606,7 +606,7 @@ begin
         for I := 0 to FClassFile.InterfacesCount - 1 do
           analyzerInterfacePool(LReadConvert, I);
       end;
-      // ·ÖÎö×Ö¶Î
+      // åˆ†æå­—æ®µ
       FClassFile.FieldsCount := LReadConvert.ReadWord;
       if FClassFile.FieldsCount > 0 then
       begin
@@ -614,7 +614,7 @@ begin
         for I := 0 to FClassFile.FieldsCount - 1 do
           analyzerFieldPool(LReadConvert, I);
       end;
-      // ·ÖÎö·½·¨
+      // åˆ†ææ–¹æ³•
       FClassFile.MethodsCount := LReadConvert.ReadWord;
       if FClassFile.MethodsCount > 0 then
       begin
@@ -622,7 +622,7 @@ begin
         for I := 0 to  FClassFile.MethodsCount - 1 do
           analyzerMethodPool(LReadConvert, I);
       end;
-      // ·ÖÎöÊôĞÔ
+      // åˆ†æå±æ€§
       FClassFile.AttributesCount := LReadConvert.ReadWord;
       if FClassFile.AttributesCount > 0 then
       begin
@@ -791,21 +791,21 @@ begin
 
     addstr('//====================================================');
     addstr('//');
-    addstr('//  ×ª»»À´×ÔJavaClassToDelphiUnit');
-    addstr('//  Ê±¼ä£º' + DateTimeToStr(Now));
-    addstr('//  ×÷Õß£ºying32');
+    addstr('//  è½¬æ¢æ¥è‡ªJavaClassToDelphiUnit');
+    addstr('//  æ—¶é—´ï¼š' + DateTimeToStr(Now));
+    addstr('//  ä½œè€…ï¼šying32');
     addstr('//  QQ: 1444386932');
     addstr('//      396506155');
-    addstr('//  Email£ºyuanfen3287@vip.qq.com');
-    addstr('//  ¸öÈËĞ¡Õ¾£ºhttp://www.ying32.com');
-    addstr('//  ²©¿Í£ºhttp://blog.csdn.net/zyjying520');
+    addstr('//  Emailï¼šyuanfen3287@vip.qq.com');
+    addstr('//  ä¸ªäººå°ç«™ï¼šhttp://www.ying32.com');
+    addstr('//  åšå®¢ï¼šhttp://blog.csdn.net/zyjying520');
     addstr('//');
     addstr('//====================================================');
     addstr(Format('unit %s;', [LUnitName]));
     addstr('');
     addstr('interface');
     addstr('');
-    addstr('uses');      // ÒıÓÃÎÄ¼ş£¬»¹Ã»Åª¡¡
+    addstr('uses');      // å¼•ç”¨æ–‡ä»¶ï¼Œè¿˜æ²¡å¼„ã€€
     addstr('  Androidapi.JNIBridge,');
     addstr('  Androidapi.JNI.JavaTypes;');
     addstr('');
@@ -813,7 +813,7 @@ begin
     addstr('type');
     addstr(Format('  J%s = interface; // %s', [LJavaClass, LThisClass.Replace('/', '.')]));
     addstr('');
-    addstr(Format('  J%sClass = interface(J%sClass)', [LJavaClass, getJavaClass(GetSuperClass)]));  //¡¡ÕâÀï»¹ÓĞ½Ó¿ÚÁË, Ã¶¾ÙÁË£¿£¿£¿£¿
+    addstr(Format('  J%sClass = interface(J%sClass)', [LJavaClass, getJavaClass(GetSuperClass)]));  //ã€€è¿™é‡Œè¿˜æœ‰æ¥å£äº†, æšä¸¾äº†ï¼Ÿï¼Ÿï¼Ÿï¼Ÿ
     addstr(Format('  [''%s'']', [TGUID.NewGuid.ToString]));
     addstr('    { Property Methods }');
 
@@ -830,7 +830,7 @@ begin
       LFuncName := getUTF8String(FClassFile.ConstantPool[FClassFile.Methods[I].Name_Index]);
       LDataType :=  getDataType(FClassFile.ConstantPool[FClassFile.Methods[I].Descriptor_Index]);
       if SameText(LFuncName, '<init>') then
-        addstr(Format('    function init(%s): J%s; cdecl;', [getParamsString(FClassFile.Methods[I]), LJavaClass])); // ·½·¨µÄÖØÔØ±êÊ¶Ã»Ìí¼Ó
+        addstr(Format('    function init(%s): J%s; cdecl;', [getParamsString(FClassFile.Methods[I]), LJavaClass])); // æ–¹æ³•çš„é‡è½½æ ‡è¯†æ²¡æ·»åŠ 
       // public static
       if FClassFile.Methods[I].Access_Flags = 9 then
         addstr(Format('    function %s(%s): J%s; cdecl;', [LFuncName, getParamsString(FClassFile.Methods[I]), LJavaClass]));
@@ -854,7 +854,7 @@ begin
     for I := 0 to FClassFile.MethodsCount - 1 do
     begin
       LFuncName := getUTF8String(FClassFile.ConstantPool[FClassFile.Methods[I].Name_Index]);
-      // public ÆäËü»¹ÓĞ£¬×ÔĞĞ¸ã¶¨
+      // public å…¶å®ƒè¿˜æœ‰ï¼Œè‡ªè¡Œæå®š
       if (FClassFile.Methods[I].Access_Flags = ACC_PUBLIC) and (not SameText('<init>', LFuncName)) then
       begin
         LDataType :=  getDataType(FClassFile.ConstantPool[FClassFile.Methods[I].Descriptor_Index]);
@@ -945,7 +945,7 @@ begin
   ToBigEndian(@Result, 2);
 end;
 
-function TReadConvert.ReadUInt64: Cardinal;
+function TReadConvert.ReadUInt64: UInt64;
 begin
   FStream.Read(Result, 8);
   ToBigEndian(@Result, 8);
