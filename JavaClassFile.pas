@@ -23,7 +23,8 @@
 //
 // 修改日志:
 //
-//   2014-8-4 更新和修正参数类型和返回值类型
+//   2014-08-04 更新和修正参数类型和返回值类型
+//   2014-08-28 修正方法名与Delphi关键字冲突替换的字符，由 _ 改为 & 
 //==============================================================================
 unit JavaClassFile;
 
@@ -568,7 +569,7 @@ var
 begin
   for I := 0 to High(KeyWords_) do
     if SameText(KeyWords_[I], Str.ToLower) then
-      Str := '_' + Str;
+      Str := '&' + Str;
 end;
 
 function TJavaClassFile.Convert(AFileName: string): string;
